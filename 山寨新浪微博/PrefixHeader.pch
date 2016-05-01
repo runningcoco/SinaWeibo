@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  山寨新浪微博
+//
+//  Created by echochief on 15-3-17.
+//  Copyright (c) 2015年 echochief. All rights reserved.
+//
+
+//#ifndef _______PrefixHeader_pch
+#define _______PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIWindow+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSString+Extension.h"
+
+#define NotificationCenter [NSNotificationCenter defaultCenter]
+
+#ifdef DEBUG  // 处于开发阶段
+#define HWLog(...) NSLog(__VA_ARGS__)
+#else    //处于发布阶段
+#define HWLog(...)
+
+// RGB颜色
+#define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#endif
